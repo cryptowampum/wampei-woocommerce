@@ -53,7 +53,9 @@ Currently we only support one currency, the one you have configured Wampei Regis
 ### 1. Settings page. ###
 You can configure the plugin via the WooCommerce settings pane.
 
-![Settings page.](http://wampei.com/assets/files/gateway-wampum-bitcoin/PluginSettings.png) 
+
+![Settings pane](http://wampei.com/assets/files/gateway-wampum-bitcoin/PluginSettings.png "Settings Pane")
+
 
 ### 2. Plugin in action on payment page. ###
 You can see here that the Bitcoin payment method is here.  You can name it in the settings pane.
