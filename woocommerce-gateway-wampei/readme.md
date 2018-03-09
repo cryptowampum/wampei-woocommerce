@@ -1,6 +1,7 @@
 # WooCommerce Bitcoin payment api for Wampei Register #
 **Contributors:** 
-**Tags:** woocommerce, bitcoin, payment, noncustodial, non-custodial , wampei, Wampei Register
+**Tags:** woocommerce, bitcoin, payment, noncustodial, non-custodial, wampei, Register
+
 **Requires at least:** 4.0  
 **Tested up to:** 4.9  
 **Stable tag:** 1.1.0
