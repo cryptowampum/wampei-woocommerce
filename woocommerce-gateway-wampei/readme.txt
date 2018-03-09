@@ -8,11 +8,13 @@
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 
 
-Allows stores to accept Bitcoin as a payment method in WooCommerce. Interfaces with through Wampei Register© merchant wallet software.  [See](http://Wampei.com/blog/Wampei/using_Wampei_woocommerce_plugin.html)
+Allows stores to accept Bitcoin as a payment method without using a third party exchange in WooCommerce. Interfaces with through Wampei Register© merchant wallet software.  [See](http://wampei.com/blog/woocommerce/plugin/ecommerce/using_wampum_woocommerce_plugin.html)
 
 ## Description ##
 
-This plugin adds a Bitcoin payment method to your store.  It requires that you have access to a Wampei Register© instance or white-labeled service that supports Wampei's API.  The plugin automatically converts the price from the currency you use to Bitcoin, but only supports ONE CURRENCY.  The one that your Wampei Register© instance is configured to use.  Using Euros or Yen or anything is ok, but the setting will apply to all payments through your store.
+This plugin adds a Bitcoin payment method to your store.  It requires that you have access to a Wampei Register© instance or white-labeled service that supports Wampei's API. [Sign Up](http://wampei.com/contact/index.html)  
+
+The plugin automatically converts the price from the currency you use to Bitcoin, but only supports ONE CURRENCY.  The one that your Wampei Register© instance is configured to use.  Using Euros or Yen or anything is ok, but the setting will apply to all payments through your store.
 
 The beautiful thing about this plugin is that it integrates so nicely into your existing workflow.  When the payment page is displayed, the system will send an email to the customer to make sure they can pay later if they don't currently have enough bitcoin available in his/her wallet.  You can also provide a link to the customer to purchase bitcoin from your favorite exchange or Bitcoin ATM.
 
@@ -20,7 +22,7 @@ A "cron" job checks the blockchain at 20-minute increments to see the status of 
 
 You can add the Bitcoin payment method to your store
 Settings configured in the WooCommerce Checkout Tab:
-Title: Title of the payment method, typically "Bitcoin."
+Title: Title of the payment method, typically "Bitcoin via Wampei"
 Customer Message: What you want your store to say as a thank you, e.g., "Thank you for purchasing with Bitcoin with Wampei Register©."
 Wampei URL: URL of your Wampei Register© instance
 Wampei Username: User name of the remote API user
@@ -48,13 +50,14 @@ Contact us at info@cryptowampum.com
 
 ### Are non-US currencies supported? ###
 Currently we only support one currency, the one you have configured Wampei Register© to use.
-
 ## Screenshots ##
 
 ### 1. Settings page. ###
 You can configure the plugin via the WooCommerce settings pane.
 
-![Settings page.](http://wampei.com/assets/files/gateway-wampum-bitcoin/PluginSettings.png) 
+
+![Settings pane](http://wampei.com/assets/files/gateway-wampum-bitcoin/PluginSettings.png "Settings Pane")
+
 
 ### 2. Plugin in action on payment page. ###
 You can see here that the Bitcoin payment method is here.  You can name it in the settings pane.

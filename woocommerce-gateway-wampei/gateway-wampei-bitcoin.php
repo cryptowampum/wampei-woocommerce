@@ -6,14 +6,14 @@
  *
  * @wordpress-plugin
  * Plugin Name: WooCommerce Wampei Bitcoin Gateway
- * Plugin URI: http://cryptowampum.com/files/gateway-wampei-bitcoin/
+ * Plugin URI: https://github.com/cryptowampum/wampei-woocommerce
  * Description: Allows WooCommerce to leverage Wampei Register© Merchant wallet for accepting Bitcoin without a third party
  * WC tested up to: 4.0
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * Author: GloboTek
- * Author URI: https://globotek.net
- * Version: 1.1.0
+ * Author: Wampei, Inc
+ * Author URI: https://wampei.com
+ * Version: 1.3
  */
 
 
