@@ -7,7 +7,7 @@
  * @wordpress-plugin
  * Plugin Name: WooCommerce Wampei Bitcoin Gateway
  * Plugin URI: https://github.com/cryptowampum/wampei-woocommerce
- * Description: Allows WooCommerce to leverage Wampei Register© Merchant wallet for accepting Bitcoin without a third party
+ * Description: Allows WooCommerce to leverage Wampei Register© Merchant wallet for accepting Bitcoin without a third party you can learn more about how a non-custodial wallet can help your business at http://wampei.com
  * WC tested up to: 4.0
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -16,6 +16,20 @@
  * Version: 1.3
  */
 
+/*
+WooCommerce Wampei Bitcoin Gateway is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+any later version.
+ 
+WooCommerce Wampei Bitcoin Gateway is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+ 
+You should have received a copy of the GNU General Public License
+along with WooCommerce Wampei Bitcoin Gateway. If not, see http://www.gnu.org/licenses/gpl-2.0.html.
+*/
 
 /**
  * Run the Wampei gateway with necessary checks to make sure running it is valid

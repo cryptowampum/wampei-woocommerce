@@ -4,12 +4,13 @@
 
 **Requires at least:** 4.0  
 **Tested up to:** 4.9  
-**Stable tag:** 1.1.0
+**Stable tag:** 1.1.3
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 
 
-Allows stores to accept Bitcoin as a payment method without using a third party exchange in WooCommerce. Interfaces with through Wampei Register© merchant wallet software.  [See](http://wampei.com/blog/woocommerce/plugin/ecommerce/using_wampum_woocommerce_plugin.html)
+Allows stores to accept Bitcoin as a payment method without using a third party exchange in WooCommerce. You can accept payments into a non-custodial wallet that you have complete control over.  
+Interfaces with your Wampei Register© merchant wallet software.  [See](http://wampei.com/blog/woocommerce/plugin/ecommerce/using_wampei_woocommerce_plugin.html)
 
 ## Description ##
 
@@ -38,12 +39,12 @@ Note that this plugin has only been tested with WooCommerce 4.0 and later.
 ### What is needed to use this plugin? ###
 
 [WooCommerce](http://wordpress.org/plugins/woocommerce/) 4.0 or later.
-[Wampei Register© Instance](http://Wampei.com) either a self-hosted or SaaS instance of Wampei Register© software.  
+[Wampei Register© Instance](http://wampei.com) either a self-hosted or SaaS instance of Wampei Register© software.  
 
 ### How can I get Wampei Register© and start accepting Bitcoin? ###
 
 At Wampei we believe that eCommerce tech should be available to all. We help our customers accept crypto payments with or without the use of a bank. Our software does give you the total control over your funds at all times. You don't have to have a bank account and neither do your customers to accept Bitcoin with Wampei Register©.
-[Sign Up](http://Wampei.com/contact/index.html)
+[Sign Up](http://wampei.com/contact/index.html)
 
 ### Need help or want to make a suggestion? ###
 
@@ -57,19 +58,19 @@ Currently we only support one currency, the one you have configured Wampei Regis
 You can configure the plugin via the WooCommerce settings pane.
 
 
-![Settings pane](http://wampei.com/assets/files/gateway-wampum-bitcoin/PluginSettings.png "Settings Pane")
 
+![Settings pane](/assets/screenshot-1.png)
 
 ### 2. Plugin in action on payment page. ###
 You can see here that the Bitcoin payment method is here.  You can name it in the settings pane.
 
-![Plugin in action.](http://wampei.com/assets/files/gateway-wampum-bitcoin/PaymentMethodsPage.png)
+![Plugin in action.](/assets/screenshot-2.png)
 
 
 ### 3. Plugin in action on payment method checkout page. ###
 Note that the payer can use the QR code or copy the payment request to the clipboard.
 
-![Payment Page](http://wampei.com/assets/files/gateway-wampum-bitcoin/PaymentPage.png)
+![Payment Page](/assets/screenshot-3.png)
 
 ## Changelog ##
 
