@@ -10,7 +10,7 @@
 
 
 The woo-gateway-wampei-bitcoin plugin allows WooCommerce to accept Bitcoin as a payment method without using a third party exchange. You can accept payments into a non-custodial wallet that you have complete control over.  
-Interfaces with your Wampei Register© merchant wallet software.  [See](http://wampei.com/blog/woocommerce/plugin/ecommerce/using_wampei_woocommerce_plugin.html)
+Interfaces with your Wampei Register© merchant wallet software.  Each payment has its own unique payment address, giving you much more control over your payments and better ability to reconcile payments and process refunds. [See](http://wampei.com/blog/woocommerce/plugin/ecommerce/using_wampei_woocommerce_plugin.html)
 
 ## Description ##
 
