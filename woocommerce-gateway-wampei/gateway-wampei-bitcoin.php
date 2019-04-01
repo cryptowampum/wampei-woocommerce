@@ -8,7 +8,7 @@
  * Plugin Name: WooCommerce Wampei Bitcoin Gateway
  * Plugin URI: https://github.com/cryptowampum/wampei-woocommerce
  * Description: Allows WooCommerce to leverage Wampei Register© Merchant wallet for accepting Bitcoin without a third party you can learn more about how a non-custodial wallet can help your business at http://wampei.com
- * WC tested up to: 5.04
+ * WC tested up to: 4.0
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Author: Wampei, Inc
@@ -199,7 +199,7 @@ function add_order_email_instructions( $order,$imageurl ) {
 	$my=true;
 	$response = $wampei->process_invoice( $order_id, $my );
 	 
-	echo '<h3>Amount in Bitcoin </h3>'.$response->priceBTC.'<h4>If you need to complete the payment view your <a href="'.$response->billURL.'">bill</a></h4><p>';
+	echo '<h3>AMOUNT IN BITCOIN </h3>'.$response->priceBTC.'<h4>If you need to complete the payment do it <a href="'.$response->billURL.'">here</a></h4><p>';
 	
  }
 register_deactivation_hook( __FILE__, 'wampei_deregister_cron' );

@@ -3,8 +3,8 @@
 **Tags:** woocommerce, bitcoin, payment, noncustodial, non-custodial, wampei, Register
 
 **Requires at least:** 4.0  
-**Tested up to:** 4.04  
-**Stable tag:** 1.4
+**Tested up to:** 4.9  
+**Stable tag:** 1.1.0
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,11 +44,11 @@ Note that this plugin has only been tested with WooCommerce 4.0 and later.
 ### How can I get Wampei Register© and start accepting Bitcoin? ###
 
 At Wampei we believe that eCommerce tech should be available to all. We help our customers accept crypto payments with or without the use of a bank. Our software does give you the total control over your funds at all times. You don't have to have a bank account and neither do your customers to accept Bitcoin with Wampei Register©.
-[Sign Up](http://wampei.com/contact/index.html)
+[Sign Up](http://wampei.com/contact-us/)
 
 ### Need help or want to make a suggestion? ###
 
-Contact us at info@cryptowampum.com
+Contact us at info@wampei.com
 
 ### Are non-US currencies supported? ###
 Currently we only support one currency, the one you have configured Wampei Register© to use.
@@ -74,15 +74,9 @@ Note that the payer can use the QR code or copy the payment request to the clipb
 
 ## Changelog ##
 
-### 1.3 ###
+### 1.0.3 ###
 
 - Added support for WooCommerce 4.8.
 - Added ability to Use Euros
-
-### 1.4 ###
-- Added better email support
-- Now includes bill url in email notifications
-- SUpport one-page checkout
-
 ## Upgrade Notice ##
 

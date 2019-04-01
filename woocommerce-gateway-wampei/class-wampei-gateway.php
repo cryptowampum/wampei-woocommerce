@@ -34,7 +34,7 @@ class WC_Wampei_Gateway extends WC_Payment_Gateway {
 		$this->init_settings();
 		
 		$this->title = $this->get_option( 'title' );
-				add_action( 'woocommerce_email'. $this->id, array( $this, 'unhook_those_pesky_emails' ));
+		add_action( 'woocommerce_email'. $this->id, array( $this, 'unhook_those_pesky_emails' ));
 		add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'update_store_currency' ) );
 		add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array(
 			$this,
@@ -121,6 +121,8 @@ class WC_Wampei_Gateway extends WC_Payment_Gateway {
 		
 		//Reduce Stock Level
 		$order->reduce_order_stock();
+		// $order->wc_reduce_stock_levels();
+		
 		
 		//Clear the cart of the order items
 		$woocommerce->cart->empty_cart();

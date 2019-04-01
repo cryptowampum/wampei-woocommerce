@@ -58,6 +58,7 @@ class Wampei {
 			$response = $this->submit_invoice( $order_id );
 			if($my==false)
 			 {
+				 
 			$this->generate_html( array(
 				'order_post_id'   => $order_id,
 				'amount'          => $response->priceBTC,
@@ -267,7 +268,7 @@ class Wampei {
 			update_post_meta( $params['order_post_id'], '_wampei_invoice_address', $params['invoice_address'] );
 			echo '<div class="wampei__col-1">';
 			echo '<div class="wampei__row">';
-			echo '<h3>Scan with wallet</h3>';
+			echo '<h3>Scan with your mobile wallet.</h3>';
 			echo '<a href="' . $params['pay_url'] . '"/><img class="wampei__qr-code" src="' . $params['qr_image'] . '"/></a>';
 			echo '</div>';
 			echo '</div>';
@@ -280,12 +281,11 @@ class Wampei {
 			echo '</div>';
 			echo '<div class="wampei__col-2">';
 			echo '<div class="wampei__row">';
-			echo '<h3>Bitcoin Exchange Rate</h3>';
-			echo '<p>$ ' . $params['btcToUsd'] . ' / BTC </p>';
+			echo '<h3>Bitcoin exchange Rate</h3>';
+			echo '<p>' . $params['btcToUsd'] . '</p>';
 			echo '</div>';
 			echo '<div class="wampei__row">';
-			echo '<h3>Bitcoin Wallet URL</h3>';
-			echo '<p> <a href="' . $params['pay_url'] . '"/>Link</a></p>';
+			echo '<p> <a href="' . $params['pay_url'] . '"/>Bitcoin Payment Request URL</a><br/>(copy and paste to your web wallet)</p>';
 			echo '</div>';
 			echo '</div>';
 			
