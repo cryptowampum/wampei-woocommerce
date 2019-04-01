@@ -3,18 +3,18 @@
 **Tags:** woocommerce, bitcoin, payment, noncustodial, non-custodial, wampei, Register
 
 **Requires at least:** 4.0  
-**Tested up to:** 4.9  
-**Stable tag:** 1.1.0
+**Tested up to:** 5.11  
+**Stable tag:** 1.4
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 
 
 Allows stores to accept Bitcoin as a payment method without using a third party exchange in WooCommerce. You can accept payments into a non-custodial wallet that you have complete control over.  
-Interfaces with your Wampei Register© merchant wallet software.  [See](http://wampei.com/blog/woocommerce/plugin/ecommerce/using_wampei_woocommerce_plugin.html)
+Interfaces with your Wampei Register© merchant wallet software.  [See](http://wampei.com/wampei-woocommerce-plugin/)
 
 ## Description ##
 
-This plugin adds a Bitcoin payment method to your store.  It requires that you have access to a Wampei Register© instance or white-labeled service that supports Wampei's API. [Sign Up](http://wampei.com/contact/index.html)  
+This plugin adds a Bitcoin payment method to your store.  It requires that you have access to a Wampei Register© instance or white-labeled service that supports Wampei's API. [Sign Up](http://wampei.com/contact-us/)  
 
 The plugin automatically converts the price from the currency you use to Bitcoin, but only supports ONE CURRENCY.  The one that your Wampei Register© instance is configured to use.  Using Euros or Yen or anything is ok, but the setting will apply to all payments through your store.
 
@@ -78,5 +78,14 @@ Note that the payer can use the QR code or copy the payment request to the clipb
 
 - Added support for WooCommerce 4.8.
 - Added ability to Use Euros
+
+### 1.3 ###
+- updated for Wordpress plugin acceptance
+
+### 1.4 ###
+- added code to work with single page payment options themes
+- added email link to bill - allowing payment if user lost the payment page
+- include the exchange rate
+
 ## Upgrade Notice ##
 
