@@ -34,7 +34,7 @@ class WC_Wampei_Gateway extends WC_Payment_Gateway {
 		$this->init_settings();
 		
 		$this->title = $this->get_option( 'title' );
-		
+				add_action( 'woocommerce_email'. $this->id, array( $this, 'unhook_those_pesky_emails' ));
 		add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'update_store_currency' ) );
 		add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array(
 			$this,
@@ -42,7 +42,7 @@ class WC_Wampei_Gateway extends WC_Payment_Gateway {
 		) );
 		
 	}
-	
+		
 	public function update_store_currency(){
 		
 		update_option( 'woocommerce_currency', strtoupper( $_POST[ 'woocommerce_wampei_currency' ] ), TRUE );
@@ -128,7 +128,7 @@ class WC_Wampei_Gateway extends WC_Payment_Gateway {
 		//Generate thankyou redirect
 		return array(
 			'result'   => 'success',
-			'redirect' => $this->get_return_url( $order )
+			'redirect' => $this->get_return_url($order)
 		);
 		
 	}

@@ -125,7 +125,7 @@ echo 'User info:' .chr(10) . implode(chr(10),$user) . chr(10);
 
 // $decoded = CheckTransactionStatus('test.register.cryptowampum.com','mszuhyJ4u4o1mGZjPk9VrToGN9LXmqP8D4',$user);
 
-$decoded = CreateTransaction('test-register.wampei.com',3.56,'testing php api',$user);
+$decoded = CreateTransaction('test-register.wampei.net',3.56,'testing php api',$user);
 
 
 /* $foo = CallAPI('POST','https://test-register.wampei.com/invoice/remote/status/json', $data, $user);

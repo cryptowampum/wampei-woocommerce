@@ -8,12 +8,12 @@
  * Plugin Name: WooCommerce Wampei Bitcoin Gateway
  * Plugin URI: https://github.com/cryptowampum/wampei-woocommerce
  * Description: Allows WooCommerce to leverage Wampei Register© Merchant wallet for accepting Bitcoin without a third party you can learn more about how a non-custodial wallet can help your business at http://wampei.com
- * WC tested up to: 4.0
+ * WC tested up to: 5.04
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Author: Wampei, Inc
  * Author URI: https://wampei.com
- * Version: 1.3
+ * Version: 1.4
  */
 
 /*
@@ -37,6 +37,9 @@ along with WooCommerce Wampei Bitcoin Gateway. If not, see http://www.gnu.org/li
  *
  * @return WC_Wampei_Gateway    Wampei Payment Gateway
  */
+ 
+ 
+ 
 function wampei_init_gateway() {
 	
 	if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
@@ -110,8 +113,8 @@ function wampei_init( $order_id ) {
 	require_once( plugin_dir_path( __FILE__ ) . 'class-wampei-api.php' );
 	
 	$wampei = new Wampei();
-	
-	return $wampei->process_invoice( $order_id );
+	$my=false;
+	return $wampei->process_invoice( $order_id,$my);
 	
 }
 
@@ -185,5 +188,18 @@ function wampei_deregister_cron() {
 	wp_clear_scheduled_hook( 'wampei_update_orders' );
 	
 }
-
+add_action( 'woocommerce_email_customer_details', 'add_order_email_instructions', 10, 2);
+function add_order_email_instructions( $order,$imageurl ) {  
+	
+	$order_arr = json_decode($order);
+	$order_id = $order_arr->id;
+	require_once( plugin_dir_path( __FILE__ ) . 'class-wampei-api.php' );
+	
+	$wampei = new Wampei();
+	$my=true;
+	$response = $wampei->process_invoice( $order_id, $my );
+	 
+	echo '<h3>Amount in Bitcoin </h3>'.$response->priceBTC.'<h4>If you need to complete the payment view your <a href="'.$response->billURL.'">bill</a></h4><p>';
+	
+ }
 register_deactivation_hook( __FILE__, 'wampei_deregister_cron' );

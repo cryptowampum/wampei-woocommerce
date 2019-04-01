@@ -47,7 +47,7 @@ class Wampei {
 	/**
 	 * @param $order_id WooCommerce Order ID
 	 */
-	public function process_invoice( $order_id ) {
+	public function process_invoice( $order_id,$my) {
 		
 		if ( $this->check_for_invoice( $order_id ) ) {
 			
@@ -56,19 +56,23 @@ class Wampei {
 		} else {
 			
 			$response = $this->submit_invoice( $order_id );
+			if($my==false)
+			 {
 			$this->generate_html( array(
 				'order_post_id'   => $order_id,
 				'amount'          => $response->priceBTC,
 				'qr_image'        => $response->qrImage,
 				'pay_url'         => $response->bitcoinUri,
-				'invoice_address' => $response->address
-			) );
+				'invoice_address' => $response->address,
+				'btcToUsd'		  =>$response->btcToUsd
+			));
+			 }
+			return $response;
 			
 		}
 		
 	}
-	
-	
+
 	/**
 	 * Update each WooCommerce order that is created via Wampei gateway and yet to be paid for.
 	 */
@@ -146,6 +150,7 @@ class Wampei {
 				'pay_url'         => $response->bitcoinUri,
 				'invoice_address' => $response->address
 			) );
+			
 			
 		}
 		
@@ -260,30 +265,28 @@ class Wampei {
 		if ( $params['invoice_address'] ) {
 			
 			update_post_meta( $params['order_post_id'], '_wampei_invoice_address', $params['invoice_address'] );
-			
 			echo '<div class="wampei__col-1">';
-			
 			echo '<div class="wampei__row">';
 			echo '<h3>Scan with wallet</h3>';
 			echo '<a href="' . $params['pay_url'] . '"/><img class="wampei__qr-code" src="' . $params['qr_image'] . '"/></a>';
 			echo '</div>';
-			
 			echo '</div>';
 			
-			
 			echo '<div class="wampei__col-2">';
-			
 			echo '<div class="wampei__row">';
 			echo '<h3>Amount in Bitcoin</h3>';
 			echo '<p>' . $params['amount'] . '</p>';
 			echo '</div>';
-						
 			echo '</div>';
-			
-			
+			echo '<div class="wampei__col-2">';
+			echo '<div class="wampei__row">';
+			echo '<h3>Bitcoin Exchange Rate</h3>';
+			echo '<p>$ ' . $params['btcToUsd'] . ' / BTC </p>';
+			echo '</div>';
 			echo '<div class="wampei__row">';
 			echo '<h3>Bitcoin Wallet URL</h3>';
 			echo '<p> <a href="' . $params['pay_url'] . '"/>Link</a></p>';
+			echo '</div>';
 			echo '</div>';
 			
 		} else {
